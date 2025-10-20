@@ -1,0 +1,52 @@
+@use '../util' as *;
+
+.card {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+  }
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  border-radius: rem(8);
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+
+  &__inner {
+    padding: rem(32);
+    border-top: 4px solid transparent;
+
+    &.cyan {
+      border-color: var(--clr-cyan);
+    }
+    &.red {
+      border-color: var(--clr-red);
+    }
+    &.orange {
+      border-color: var(--clr-orange);
+    }
+    &.blue {
+      border-color: var(--clr-blue);
+    }
+  }
+
+  &__header {
+    h2 {
+      font: var(--text-preset-3);
+    }
+  }
+
+  &__body {
+  }
+
+  &__img {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../util' as *;
+
+.hero {
+  color: var(--clr-gray-500);
+  text-align: center;
+
+  h1 {
+    font: var(--text-preset-2);
+    letter-spacing: var(--letter-spacing);
+
+    span {
+      font: var(--text-preset-1);
+    }
+  }
+
+  p {
+    font: var(--text-preset-4);
+  }
+}
