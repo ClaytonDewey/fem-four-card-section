@@ -18,7 +18,11 @@ body {
   padding: rem(56) rem(30);
 
   @include breakpoint(medium) {
-    // font-size: var(--fs-reg);
+    padding: rem(80) rem(54);
+  }
+
+  @include breakpoint(large) {
+    padding-top: rem(102);
   }
 }
 
