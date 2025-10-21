@@ -15,15 +15,23 @@
   // Font-family
   --ff-sans: 'Poppins', Arial, Helvetica, sans-serif;
 
+  // Spacing
+  --sp-8: #{rem(8)};
+  --sp-16: #{rem(16)};
+  --sp-24: #{rem(24)};
+  --sp-32: #{rem(32)};
+  --sp-40: #{rem(40)};
+
   // Font-sizes
-  --fs-large: #{rem(36)};
+  --fs-xlarge: #{rem(36)};
+  --fs-large: #{rem(24)};
   --fs-med: #{rem(20)};
   --fs-reg: #{rem(15)};
   --fs-small: #{rem(13)};
   --fs-xsmall: #{rem(11)};
 
   // Font-weights
-  --fw-light: 200;
+  --fw-xlight: 200;
   --fw-reg: 400;
   --fw-semibold: 600;
 
@@ -31,10 +39,10 @@
   --letter-spacing: #{rem(0.25)};
 
   // Text presets
-  --text-preset-1: normal normal var(--fw-semibold) var(--fs-med) / 140%
+  --text-preset-1: normal normal var(--fw-semibold) var(--fs-large) / 140%
     var(--ff-sans);
 
-  --text-preset-2: normal normal var(--fw-light) var(--fs-med) / 140%
+  --text-preset-2: normal normal var(--fw-xlight) var(--fs-large) / 140%
     var(--ff-sans);
 
   --text-preset-3: normal normal var(--fw-semibold) var(--fs-med) / 135%
@@ -49,10 +57,10 @@
 
 @include breakpoint(medium) {
   :root {
-    --text-preset-1: normal normal var(--fw-semibold) var(--fs-large) / 140%
+    --text-preset-1: normal normal var(--fw-semibold) var(--fs-xlarge) / 140%
       var(--ff-sans);
 
-    --text-preset-2: normal normal var(--fw-light) var(--fs-large) / 140%
+    --text-preset-2: normal normal var(--fw-xlight) var(--fs-xlarge) / 140%
       var(--ff-sans);
   }
 }
