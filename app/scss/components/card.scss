@@ -2,38 +2,75 @@
 
 .card {
   &__container {
-    display: flex;
-    flex-direction: column;
-    gap: rem(32);
+    display: grid;
+    place-content: center;
+    gap: var(--sp-32);
+    max-width: rem(1114);
+    margin: auto;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
 
   display: flex;
   flex-direction: column;
   background-color: var(--clr-white);
-  border-radius: rem(8);
+  border-radius: var(--sp-8);
   box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+  overflow: hidden;
+  height: rem(250);
+  width: rem(314);
+  margin: auto;
 
-  &__inner {
-    padding: rem(32);
-    border-top: 4px solid transparent;
-
-    &.cyan {
+  &.cyan {
+    .card__inner {
       border-color: var(--clr-cyan);
     }
-    &.red {
+  }
+
+  &.red {
+    .card__inner {
       border-color: var(--clr-red);
     }
-    &.orange {
+  }
+
+  &.orange {
+    .card__inner {
       border-color: var(--clr-orange);
     }
-    &.blue {
+  }
+
+  &.blue {
+    .card__inner {
       border-color: var(--clr-blue);
     }
+  }
+
+  &__inner {
+    padding: var(--sp-32);
+    border-top: 5px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-32);
+    height: 100%;
   }
 
   &__header {
     h2 {
       font: var(--text-preset-3);
+      margin-bottom: var(--sp-8);
+    }
+
+    p {
+      font: var(--text-preset-5);
+      color: var(--clr-gray-400);
     }
   }
 
@@ -47,6 +84,38 @@
       height: auto;
       vertical-align: middle;
       float: right;
+    }
+  }
+
+  @include breakpoint(medium) {
+    &.cyan {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    &.red {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+    &.orange {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    &.blue {
+      grid-area: 3 / 1 / 4 / 3;
+    }
+  }
+
+  @include breakpoint(large) {
+    width: rem(350);
+
+    &.cyan {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    &.red {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    &.orange {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    &.blue {
+      grid-area: 1 / 3 / 3 / 4;
     }
   }
 }
